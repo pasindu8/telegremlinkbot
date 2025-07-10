@@ -9,7 +9,7 @@ bot.on('message', (msg) => {
   if (document) {
     const fileId = document.file_id;
     bot.getFileLink(fileId).then((link) => {
-      bot.sendMessage(chatId, Direct download link: ${link});
+      bot.sendMessage(chatId, 'Direct download link: ${link}');
     });
   } else {
     bot.sendMessage(chatId, 'Please send a document to get a direct download link.');
